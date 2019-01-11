@@ -5,7 +5,9 @@ import v4 from 'uuid' // another way of generating unique ids (useful for keys)
 class CategoryContainer extends React.Component {
   render() {
     return (
-      <div>{/* render categories */}</div>
+      <div>{this.props.categories.map(cat => {
+        return <Category handleClick={this.props.handleClick} key={cat.idCategory} {...cat}/>
+      })}</div>
     )
   }
 }

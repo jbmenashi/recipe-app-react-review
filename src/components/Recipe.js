@@ -6,9 +6,9 @@ const Recipe = (props) => {
   return (
     <Card
       key={v4()}
-      header={<CardTitle key={v4()} image={/* recipe image here */} />}
-      title={/* recipe name here */}
-      onClick={/* add to my list or remove recipe from my list */}
+      header={<CardTitle key={v4()} image={props.strMealThumb} />}
+      title={props.strMeal}
+      onClick={() => props.handleRecipeClick(props.idMeal)}
     />
   )
 }

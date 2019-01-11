@@ -9,7 +9,7 @@ class Header extends React.Component {
 
         <div className='container'>
           <h5>Filter by Category:</h5>
-          <input type='text' />
+          <input onChange={this.props.handleChange}type='text' value={this.props.inputValue} name="filter"/>
         </div>
       </Fragment>
     )
@@ -18,3 +18,7 @@ class Header extends React.Component {
 }
 
 export default Header
+
+//capture input
+//go through this.state.categories and create new array made up of included object with inout value
+//set this.state.categories to that array
